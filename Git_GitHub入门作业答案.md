@@ -92,10 +92,6 @@ git push -u origin feature/add-json
 
 ### Q6：创建 PR 并合并
 
-**操作：**
-- PR #1：https://github.com/ljp060823/git_learning_GitHub/pull/1
-- 从 feature/add-json 分支向 main 分支发起 PR
-- 已合并（merge）
 
 **（1）"合并（merge）"这一步实际上做了什么？**  
 合并就是把 feature/add-json 分支上的所有改动（新增的 sample.json 文件）整合到 main 分支中。合并后，main 分支就有了 sample.json 文件，两个分支的代码保持一致。

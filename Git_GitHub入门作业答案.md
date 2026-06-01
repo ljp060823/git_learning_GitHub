@@ -2,51 +2,21 @@
 
 **学生：** ljp060823 (刘建平)  
 **GitHub：** https://github.com/ljp060823  
-**仓库链接：** https://github.com/ljp060823/git_learning_GitHub
+**仓库链接：** https://github.com/ljp060823/git_learning_GitHub https://github.com/ljp060823?tab=repositories
 
----
 
-## 一、Git 工作流程示意图
-
-```
-工作区（你正在编辑的文件）
-    ↓ git add
-暂存区（准备好要提交的改动）
-    ↓ git commit
-本地版本库（记录在你电脑里的历史版本）
-    ↓ git push
-远程仓库 GitHub（云端的版本库，用来备份和协作）
-```
-
----
-
-## 二、基础概念
-
-### Q1：用自己的话回答下面四个问题
-
-**1）Git 是什么？**  
+**（1）Git 是什么？**  
 Git 是一个版本管理工具，安装在自己电脑上。它能记录你每次修改了什么文件、改了什么内容，让你可以随时回退到任何一个历史版本，就像游戏的存档系统一样。
 
-**2）GitHub 是什么？**  
-GitHub 是一个云端网站，专门用来存放 Git 仓库的。你可以把自己的代码备份到 GitHub 上，也可以和别人一起协作开发项目。
+**（2）GitHub 是什么？**  
+GitHub 是一个云端网站，专门用来存放 Git 仓库的。你可以把自己的代码备份到 GitHub 上的代码仓库，也可以和别人一起协作开发项目。
 
-**3）Git 和 GitHub 的关系是什么？**  
-Git 是本地工具，GitHub 是云端平台。Git 负责在你电脑上管理版本，GitHub 负责在云端备份和共享。用 `git push` 把本地的提交推到 GitHub，用 `git pull` 把 GitHub 上的更新拉到本地。
+**（3）Git 和 GitHub 的关系是什么？**  
+Git 是本地工具，GitHub 是云端平台。Git 负责在你电脑上管理版本，GitHub 负责在云端备份和共享。用 `git push` 把本地的提交推到 GitHub，用 `git pull` 把 GitHub 上的更新拉到本地，git是工具，github是放代码的仓库。
 
 **4）你的本地电脑在这里面扮演什么角色？**  
-本地电脑是实际写代码和开发的地方（工作区），用 Git 管理版本（本地版本库），然后推送到 GitHub 做备份和协作（远程仓库）。
+本地电脑是实际写代码和开发的地方，用 Git 管理版本，然后推送到 GitHub 远程仓库做备份和协作。
 
----
-
-## 三、Fork 示例仓库
-
-**操作：** 已将示例仓库 https://github.com/DaWenTI-sleep/git_learning_GitHub Fork 到自己的 GitHub 账号下。
-
-**我的仓库地址：** https://github.com/ljp060823/git_learning_GitHub
-
----
-
-## 四、克隆个人 Fork 后的仓库（clone）
 
 ### Q2：克隆完成后回答
 
@@ -59,17 +29,10 @@ gh repo clone ljp060823/git_learning_GitHub
 克隆完成后，电脑上多了一个 `git_learning_GitHub` 文件夹，里面包含了仓库的所有文件（两个 PDF 文件），以及一个隐藏的 `.git` 文件夹。
 
 **2）这个项目目录里面的 .git 文件夹是做什么用的？**  
-`.git` 文件夹是 Git 的核心，它存储了这个项目所有的版本历史记录，包括：
-- 每一次提交（commit）的记录
-- 所有分支的信息
-- 暂存区的状态
-- 远程仓库的地址
-
+`.git` 文件夹是 Git 的核心，它存储了这个项目所有的版本历史记录，包括：每一次提交（commit）的记录  所有分支的信息 暂存区的状态 远程仓库的地址
 没有这个文件夹，Git 就无法追踪这个项目的版本变化。
 
 ---
-
-## 五、提交一次改动（add + commit）
 
 ### Q3：新建 helo.txt 并提交
 
@@ -81,18 +44,15 @@ git commit -m "Add helo.txt"
 ```
 
 **1）git add 做了什么？**  
-`git add` 把修改的文件从"工作区"放到"暂存区"。暂存区就像一个待提交的清单，告诉 Git "这些修改我准备好了，下次提交时把它们带上"。
+`git add` 把修改的文件从 工作区 放到 暂存区 。暂存区就像一个待提交的清单，告诉 Git 这些修改我准备好了，下次提交时把它们带上。
 
 **2）git commit 做了什么？**  
-`git commit` 把暂存区的所有内容打包成一个"提交记录"，保存到本地版本库。每个 commit 都有一个唯一的 ID 和提交信息（-m 后面的内容），方便以后查看和回退。
+`git commit` 把暂存区的所有内容打包成一个"提交记录"，保存到本地版本库。每个 commit 都有一个唯一的 ID 和提交信息），方便以后查看和回退。
 
 **3）为什么不能只 commit 而不 add？**  
 因为 Git 需要你先明确"选择"哪些修改要提交。`add` 就是这个选择的过程。如果不 add，Git 不知道你要提交哪些改动。这样设计的好处是：你可以只提交部分修改，而不是把所有改动一次性提交。
 
 ---
-
-## 六、推送到 GitHub（push）
-
 ### Q4：推送到 GitHub
 
 **命令：**
@@ -101,19 +61,14 @@ git push origin main
 ```
 
 **1）推送之前和推送之后，GitHub 上有什么变化？**  
-- 推送之前：GitHub 上没有 `helo.txt` 文件
-- 推送之后：GitHub 上出现了 `helo.txt` 文件，以及对应的提交记录
+- 推送之前：GitHub 上没有 `hello.txt` 文件
+- 推送之后：GitHub 上出现了 `hello.txt` 文件，以及对应的提交记录
 
 **2）你是怎么确认新的提交（commit）已经出现在 GitHub 上的？**  
-在 GitHub 仓库页面上：
-- 看到新文件 `helo.txt` 出现在文件列表中
-- 点击文件能看到内容
-- 提交记录数量增加了
-- 点击 commits 可以看到新的提交记录
+在 GitHub 仓库页面上：看到新文件 `hello.txt` 出现在文件列表中 点击文件能看到内容 提交记录数量增加了 点击 commits 可以看到新的提交记录
 
 ---
 
-## 七、创建分支并在分支上开发
 
 ### Q5：创建 feature/add-json 分支
 
@@ -134,7 +89,6 @@ git push -u origin feature/add-json
 
 ---
 
-## 八、在 GitHub 上创建 Pull Request 并合并
 
 ### Q6：创建 PR 并合并
 
@@ -153,7 +107,6 @@ git push -u origin feature/add-json
 
 ---
 
-## 九、制造一次简单的冲突并解决
 
 ### Q7：制造冲突并解决
 
@@ -186,8 +139,6 @@ Helo from feature - 修改版本
 
 ---
 
-## 十、pull 和 fetch 的区别
-
 ### Q8：pull 和 fetch 的区别
 
 **1）git fetch 做了什么？**  
@@ -205,17 +156,3 @@ Helo from feature - 修改版本
 而 `git fetch` 只是下载不合并，你可以先查看远程有什么变化，确认没问题后再手动 merge，更安全。
 
 ---
-
-## 作业完成情况
-
-- ✅ Fork 示例仓库
-- ✅ 克隆仓库到本地
-- ✅ 创建并提交 helo.txt
-- ✅ 推送到 GitHub
-- ✅ 创建 feature/add-json 分支
-- ✅ 添加 sample.json 并提交
-- ✅ 创建 PR 并合并
-- ✅ 制造并解决冲突
-- ✅ 所有问题的文字回答
-
-**GitHub 仓库：** https://github.com/ljp060823/git_learning_GitHub

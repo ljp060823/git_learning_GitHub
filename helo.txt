@@ -1,3 +1,2 @@
-Helo from main - 修改版本
-Helo from feature - 修改版本
-(已解决冲突，保留双方内容)
+Hello from main - 修改版本
+Hello from feature - 修改版本
